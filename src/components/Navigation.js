@@ -2,13 +2,9 @@ import React, { useContext } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import logo from "../images/Pokédex_logo-removebg-preview.png";
 
-
 const Navigation = () => {
-  
-
   const navigate = useNavigate();
 
-  
   return (
     <>
       <header className="container">
