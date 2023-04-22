@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/assign2_pokedex/static/css/main.a3b3ee5d.css",
+    "main.js": "/assign2_pokedex/static/js/main.e474921d.js",
+    "static/media/Pokédex_logo-removebg-preview.png": "/assign2_pokedex/static/media/Pokédex_logo-removebg-preview.3cbd948a446f6b42bfce.png",
+    "index.html": "/assign2_pokedex/index.html",
+    "main.a3b3ee5d.css.map": "/assign2_pokedex/static/css/main.a3b3ee5d.css.map",
+    "main.e474921d.js.map": "/assign2_pokedex/static/js/main.e474921d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3b3ee5d.css",
+    "static/js/main.e474921d.js"
+  ]
+}
