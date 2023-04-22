@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.a3b3ee5d.css",
+    "main.js": "/react-gh-pages/static/js/main.98e57c8a.js",
+    "static/media/Pokédex_logo-removebg-preview.png": "/react-gh-pages/static/media/Pokédex_logo-removebg-preview.3cbd948a446f6b42bfce.png",
+    "index.html": "/react-gh-pages/index.html",
+    "main.a3b3ee5d.css.map": "/react-gh-pages/static/css/main.a3b3ee5d.css.map",
+    "main.98e57c8a.js.map": "/react-gh-pages/static/js/main.98e57c8a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a3b3ee5d.css",
+    "static/js/main.98e57c8a.js"
+  ]
+}
