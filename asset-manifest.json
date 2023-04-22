@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.a3b3ee5d.css",
-    "main.js": "/react-gh-pages/static/js/main.98e57c8a.js",
-    "static/media/Pokédex_logo-removebg-preview.png": "/react-gh-pages/static/media/Pokédex_logo-removebg-preview.3cbd948a446f6b42bfce.png",
-    "index.html": "/react-gh-pages/index.html",
-    "main.a3b3ee5d.css.map": "/react-gh-pages/static/css/main.a3b3ee5d.css.map",
-    "main.98e57c8a.js.map": "/react-gh-pages/static/js/main.98e57c8a.js.map"
+    "main.css": "/assign2_pokedex/static/css/main.a3b3ee5d.css",
+    "main.js": "/assign2_pokedex/static/js/main.b9349e26.js",
+    "static/media/Pokédex_logo-removebg-preview.png": "/assign2_pokedex/static/media/Pokédex_logo-removebg-preview.3cbd948a446f6b42bfce.png",
+    "index.html": "/assign2_pokedex/index.html",
+    "main.a3b3ee5d.css.map": "/assign2_pokedex/static/css/main.a3b3ee5d.css.map",
+    "main.b9349e26.js.map": "/assign2_pokedex/static/js/main.b9349e26.js.map"
   },
   "entrypoints": [
     "static/css/main.a3b3ee5d.css",
-    "static/js/main.98e57c8a.js"
+    "static/js/main.b9349e26.js"
   ]
 }
