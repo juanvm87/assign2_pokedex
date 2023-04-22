@@ -42,6 +42,9 @@ export const PokemonProvider = ({ children }) => {
   };
 
   //get all pokemons
+  //we are aware of the problem with ERR_UFFICIENT_RESOURCES, 
+  //despite getting hints from Kasper how to fix it at the moment it is the best what we can do
+  //We intend to fix it in the future
   const getAllPokemons = async () => {
     try {
       setLoading(true);
@@ -55,8 +58,7 @@ export const PokemonProvider = ({ children }) => {
       }
       const data = await res.json();
 
-      // In this case, many ERR_INSUFFICIENT_RESOURCES errors occur, but the app works fine.
-      /*  const promises = data.results.map(async (pokemon) => {
+      const promises = data.results.map(async (pokemon) => {
         const pokemonRes = await fetch(pokemon.url);
         if (!pokemonRes.ok) {
           throw new Error(`Failed to fetch data for ${pokemon.name}`);
@@ -64,22 +66,9 @@ export const PokemonProvider = ({ children }) => {
         const pokemonData = await pokemonRes.json();
         return pokemonData;
       });
-      const results = await Promise.all(promises); 
-      */  
-      const results = [];
-
-      for (const pokemon of data.results) {
-        const pokemonRes = await fetch(pokemon.url);
-
-        if (!pokemonRes.ok) {
-          throw new Error(`Failed to fetch data for ${pokemon.name}`);
-        }
-        const pokemonData = await pokemonRes.json();
-        results.push(pokemonData);
-        console.log(pokemonData);
-      }
-      const resData = await Promise.all(results);
-      setAllPokemons(resData);
+      const results = await Promise.all(promises);
+      
+      setAllPokemons(results);
       setLoading(false);
     } catch (error) {
       console.log(error);
@@ -100,7 +89,8 @@ export const PokemonProvider = ({ children }) => {
 
   useEffect(() => {
     getAllPokemons();
-  }, [currentPage]);
+  }, []);
+
 
   useEffect(() => {
     getPokemons(currentPage);
@@ -133,32 +123,3 @@ export const PokemonProvider = ({ children }) => {
     </PokemonContext.Provider>
   );
 };
-
-/*
-useEffect(() => {
-  const getSearchPokemon = async () => {
-    try {
-      const getData = await getAllPokemons();
-      const data = getData.results.filter((pokemon) =>
-        pokemon.name.includes(valueSearch)
-      );
-      const promises = data.map(async (pokemon) => {
-        const pokemonRes = await fetch(pokemon.url);
-        if (!pokemonRes.ok) {
-          throw new Error(`Failed to fetch data for ${pokemon.name}`);
-        }
-        const pokemonData = await pokemonRes.json();
-        return pokemonData;
-      });
-      const results = await Promise.all(promises);
-      setAllPokemons(results);
-      setLoading(false);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-  const fetchData = async () => {
-    await getSearchPokemon();
-  };
-  fetchData();
-  */
