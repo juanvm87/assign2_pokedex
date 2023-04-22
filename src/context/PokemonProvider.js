@@ -65,7 +65,7 @@ export const PokemonProvider = ({ children }) => {
         return pokemonData;
       });
       const results = await Promise.all(promises); 
-      */
+      */  
       const results = [];
 
       for (const pokemon of data.results) {
@@ -76,6 +76,7 @@ export const PokemonProvider = ({ children }) => {
         }
         const pokemonData = await pokemonRes.json();
         results.push(pokemonData);
+        console.log(pokemonData);
       }
       const resData = await Promise.all(results);
       setAllPokemons(resData);
@@ -99,7 +100,7 @@ export const PokemonProvider = ({ children }) => {
 
   useEffect(() => {
     getAllPokemons();
-  }, []);
+  }, [currentPage]);
 
   useEffect(() => {
     getPokemons(currentPage);
@@ -160,5 +161,4 @@ useEffect(() => {
     await getSearchPokemon();
   };
   fetchData();
-}, [valueSearch]);
-*/
+  */
